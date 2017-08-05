@@ -112,20 +112,6 @@
     <Compile Include="Areas\LifeMan\Controllers\BankTypeController.cs" />
     <Compile Include="Areas\LifeMan\Controllers\ServiceController.cs" />
     <Compile Include="Areas\LifeMan\LifeManAreaRegistration.cs" />
-    <Compile Include="ArticleManage\AddArticle.aspx.cs">
-      <DependentUpon>AddArticle.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ArticleManage\AddArticle.aspx.designer.cs">
-      <DependentUpon>AddArticle.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ArticleManage\ArticleShow.aspx.cs">
-      <DependentUpon>ArticleShow.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ArticleManage\ArticleShow.aspx.designer.cs">
-      <DependentUpon>ArticleShow.aspx</DependentUpon>
-    </Compile>
     <Compile Include="BackPwd\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -135,27 +121,6 @@
     </Compile>
     <Compile Include="Code\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ArticleManage\MasterPage.Master.cs">
-      <DependentUpon>MasterPage.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ArticleManage\MasterPage.Master.designer.cs">
-      <DependentUpon>MasterPage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="ArticleManage\ArticleDetail.aspx.cs">
-      <DependentUpon>ArticleDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ArticleManage\ArticleDetail.aspx.designer.cs">
-      <DependentUpon>ArticleDetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ArticleManage\SOC接口.aspx.cs">
-      <DependentUpon>SOC接口.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ArticleManage\SOC接口.aspx.designer.cs">
-      <DependentUpon>SOC接口.aspx</DependentUpon>
     </Compile>
     <Compile Include="Code\BaseController.cs" />
     <Compile Include="Areas\LifeMan\Controllers\ArtCategoryController.cs" />
@@ -175,13 +140,6 @@
     <Compile Include="Areas\LifeMan\Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="HTML\AddData.aspx.cs">
-      <DependentUpon>AddData.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HTML\AddData.aspx.designer.cs">
-      <DependentUpon>AddData.aspx</DependentUpon>
     </Compile>
     <Compile Include="HTML\SearchImg.aspx.cs">
       <DependentUpon>SearchImg.aspx</DependentUpon>
@@ -223,10 +181,6 @@
   <ItemGroup>
     <Content Include="App_Themes\Blog\BlogStyle.css" />
     <Content Include="App_Themes\Detail\detail.css" />
-    <Content Include="ArticleManage\AddArticle.aspx" />
-    <Content Include="ArticleManage\ArticleDetail.aspx" />
-    <Content Include="ArticleManage\ArticleShow.aspx" />
-    <Content Include="ArticleManage\SOC接口.aspx" />
     <Content Include="BackPwd\error.htm" />
     <Content Include="BackPwd\index.aspx" />
     <Content Include="Content\CSS\detail.css" />
@@ -5613,7 +5567,6 @@
     <Content Include="Content\Script\touch-2.3.1\src\XTemplateCompiler.js" />
     <Content Include="Content\Script\touch-2.3.1\src\XTemplateParser.js" />
     <Content Include="Global.asax" />
-    <Content Include="HTML\AddData.aspx" />
     <Content Include="HTML\HTMLPage1.htm" />
     <Content Include="HTML\Index.htm" />
     <Content Include="HTML\SearchImg.aspx" />
@@ -5646,7 +5599,6 @@
   <ItemGroup>
     <Content Include="AJ\UpdImage\file_manager_json.ashx" />
     <Content Include="AJ\UpdImage\upload_json.ashx" />
-    <Content Include="ArticleManage\MasterPage.Master" />
     <Content Include="App_Themes\Blog\Blog.skin" />
     <Content Include="App_Themes\Detail\Detail.skin" />
     <Content Include="AJ\LoginCheck.ashx" />
@@ -6241,10 +6193,6 @@
     <ProjectReference Include="..\Life.Common\Life.Common.csproj">
       <Project>{5ECB4891-FC81-4A6C-9326-D98ADE4E4316}</Project>
       <Name>Life.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Life.DAL\Life.DAL.csproj">
-      <Project>{8395ABD4-6B79-4EB5-8174-F65509CE1786}</Project>
-      <Name>Life.DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Life.Factory\Life.Factory.csproj">
       <Project>{7EB67372-92E0-4154-BC78-36BEA753F0D6}</Project>

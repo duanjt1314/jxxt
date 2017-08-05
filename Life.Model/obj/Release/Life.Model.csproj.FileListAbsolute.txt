@@ -1,8 +1,0 @@
-E:\Project\LifeManager\trunk\Life.Model\bin\Release\Life.Model.dll
-E:\Project\LifeManager\trunk\Life.Model\bin\Release\Life.Model.pdb
-E:\Project\LifeManager\trunk\Life.Model\bin\Release\EntityFramework.dll
-E:\Project\LifeManager\trunk\Life.Model\bin\Release\Newtonsoft.Json.dll
-E:\Project\LifeManager\trunk\Life.Model\bin\Release\EntityFramework.xml
-E:\Project\LifeManager\trunk\Life.Model\obj\Release\Life.Model.csprojResolveAssemblyReference.cache
-E:\Project\LifeManager\trunk\Life.Model\obj\Release\Life.Model.dll
-E:\Project\LifeManager\trunk\Life.Model\obj\Release\Life.Model.pdb
