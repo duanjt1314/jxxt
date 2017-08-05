@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>角色模块对应信息</title>
+    <link href="/Content/CSS/icon.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/Script/ExtJs/resources/css/ext-all.css" rel="stylesheet"
+        type="text/css" />
+    <script src="/Content/Script/ExtJs/ext-all.js" type="text/javascript"></script>
+    <script src="/Content/Script/ExtJs/locale/ext-lang-zh_CN.js" type="text/javascript"></script>
+
+    <script src="/Content/Function/LifeMan/RoleToModule/RolesTree.js" type="text/javascript"></script>
+    <script src="/Content/Function/LifeMan/RoleToModule/ModelTreeGrid.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var roleId = "";
+        Ext.onReady(function () {
+            Ext.create("Ext.container.Viewport", {
+                layout: "border",
+                items: [rolesTree, moduleGrid],
+                listeners: {
+                    "afterrender": function () {
+                        parent.myMask.hide();
+                    }
+                }
+            });
+            rolesTree.store.load();
+        });
+    </script>
+</head>
+<body>
+    <div>
+        
+    </div>
+</body>
+</html>

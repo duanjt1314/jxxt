@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7089FB59-A531-4AC3-8931-95D1C9D32ED6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Life.SQLiteDAL</RootNamespace>
+    <AssemblyName>Life.SQLiteDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\Bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SQLite, Version=1.0.82.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LifeMan\DLArtCategory.cs" />
+    <Compile Include="LifeMan\DLArticle.cs" />
+    <Compile Include="LifeMan\DLBankCard.cs" />
+    <Compile Include="LifeMan\DLDiction.cs" />
+    <Compile Include="LifeMan\DLIncome.cs" />
+    <Compile Include="LifeMan\DLLifingCost.cs" />
+    <Compile Include="LifeMan\DLModule.cs" />
+    <Compile Include="LifeMan\DLRoles.cs" />
+    <Compile Include="LifeMan\DLRoleToModule.cs" />
+    <Compile Include="LifeMan\DLSysConfig.cs" />
+    <Compile Include="LifeMan\DLTempData.cs" />
+    <Compile Include="LifeMan\DLUsers.cs" />
+    <Compile Include="LifeMan\DLUserToRole.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Life.Common\Life.Common.csproj">
+      <Project>{5ECB4891-FC81-4A6C-9326-D98ADE4E4316}</Project>
+      <Name>Life.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Life.DALCommon\Life.DALCommon.csproj">
+      <Project>{0C446EE8-B527-4288-9B63-6DFC5E8261A9}</Project>
+      <Name>Life.DALCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Life.Factory\Life.Factory.csproj">
+      <Project>{7EB67372-92E0-4154-BC78-36BEA753F0D6}</Project>
+      <Name>Life.Factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Life.Model\Life.Model.csproj">
+      <Project>{5E2B194F-D7AF-427F-B99E-2CB1C13D8521}</Project>
+      <Name>Life.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

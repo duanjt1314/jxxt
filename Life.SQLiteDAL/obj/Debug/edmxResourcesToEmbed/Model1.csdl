@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Life.SQLiteDAL" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Art_Category" EntityType="Life.SQLiteDAL.Art_Category" />
+    <EntitySet Name="Article" EntityType="Life.SQLiteDAL.Article" />
+    <EntitySet Name="Bank_Card" EntityType="Life.SQLiteDAL.Bank_Card" />
+    <EntitySet Name="Bank_Card_log" EntityType="Life.SQLiteDAL.Bank_Card_log" />
+    <EntitySet Name="Diction" EntityType="Life.SQLiteDAL.Diction" />
+    <EntitySet Name="Income" EntityType="Life.SQLiteDAL.Income" />
+    <EntitySet Name="Lifing_Cost" EntityType="Life.SQLiteDAL.Lifing_Cost" />
+    <EntitySet Name="Lifing_Cost_log" EntityType="Life.SQLiteDAL.Lifing_Cost_log" />
+    <EntitySet Name="Module" EntityType="Life.SQLiteDAL.Module" />
+    <EntitySet Name="Role_To_Module" EntityType="Life.SQLiteDAL.Role_To_Module" />
+    <EntitySet Name="Roles" EntityType="Life.SQLiteDAL.Roles" />
+    <EntitySet Name="Temp_Data" EntityType="Life.SQLiteDAL.Temp_Data" />
+    <EntitySet Name="User_To_Role" EntityType="Life.SQLiteDAL.User_To_Role" />
+    <EntitySet Name="Users" EntityType="Life.SQLiteDAL.Users" />
+    <EntitySet Name="V_Art_Category" EntityType="Life.SQLiteDAL.V_Art_Category" />
+    <EntitySet Name="V_BANK_CARD" EntityType="Life.SQLiteDAL.V_BANK_CARD" />
+    <EntitySet Name="V_Income" EntityType="Life.SQLiteDAL.V_Income" />
+    <EntitySet Name="V_LIFING_COST" EntityType="Life.SQLiteDAL.V_LIFING_COST" />
+    <AssociationSet Name="FK_Article_0" Association="Life.SQLiteDAL.FK_Article_0">
+      <End Role="Art_Category" EntitySet="Art_Category" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bank_Card_0" Association="Life.SQLiteDAL.FK_Bank_Card_0">
+      <End Role="Diction" EntitySet="Diction" />
+      <End Role="Bank_Card" EntitySet="Bank_Card" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bank_Card_1" Association="Life.SQLiteDAL.FK_Bank_Card_1">
+      <End Role="Diction" EntitySet="Diction" />
+      <End Role="Bank_Card" EntitySet="Bank_Card" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lifing_Cost_0" Association="Life.SQLiteDAL.FK_Lifing_Cost_0">
+      <End Role="Diction" EntitySet="Diction" />
+      <End Role="Lifing_Cost" EntitySet="Lifing_Cost" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Role_To_Module_0" Association="Life.SQLiteDAL.FK_Role_To_Module_0">
+      <End Role="Module" EntitySet="Module" />
+      <End Role="Role_To_Module" EntitySet="Role_To_Module" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Role_To_Module_1" Association="Life.SQLiteDAL.FK_Role_To_Module_1">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Role_To_Module" EntitySet="Role_To_Module" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_To_Role_0" Association="Life.SQLiteDAL.FK_User_To_Role_0">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="User_To_Role" EntitySet="User_To_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_To_Role_1" Association="Life.SQLiteDAL.FK_User_To_Role_1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="User_To_Role" EntitySet="User_To_Role" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Art_Category">
+    <Key>
+      <PropertyRef Name="Cat_Id" />
+    </Key>
+    <Property Name="Cat_Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Cat_Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Cat_Remark" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Cat_Order" Type="Int32" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="UpDate_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="UpDate_Time" Type="DateTime" />
+    <NavigationProperty Name="Article" Relationship="Life.SQLiteDAL.FK_Article_0" FromRole="Art_Category" ToRole="Article" />
+  </EntityType>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Content" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="UpDate_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="UpDate_Time" Type="DateTime" />
+    <NavigationProperty Name="Art_Category" Relationship="Life.SQLiteDAL.FK_Article_0" FromRole="Article" ToRole="Art_Category" />
+  </EntityType>
+  <EntityType Name="Bank_Card">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="TIME" Type="DateTime" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Balance" Type="Double" />
+    <Property Name="Note" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="UpDate_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="UpDate_Time" Type="DateTime" />
+    <NavigationProperty Name="Diction" Relationship="Life.SQLiteDAL.FK_Bank_Card_0" FromRole="Bank_Card" ToRole="Diction" />
+    <NavigationProperty Name="Diction1" Relationship="Life.SQLiteDAL.FK_Bank_Card_1" FromRole="Bank_Card" ToRole="Diction" />
+  </EntityType>
+  <EntityType Name="Bank_Card_log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Bank_Id" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="TIME" Type="DateTime" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Save_Type" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Balance" Type="Double" />
+    <Property Name="Bank_Type" Type="String" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Name="Note" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="Ope_Type" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Diction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Note" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Parent_Id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Order_Id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Create_By" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="Update_By" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Update_Time" Type="DateTime" />
+    <NavigationProperty Name="Bank_Card" Relationship="Life.SQLiteDAL.FK_Bank_Card_0" FromRole="Diction" ToRole="Bank_Card" />
+    <NavigationProperty Name="Bank_Card1" Relationship="Life.SQLiteDAL.FK_Bank_Card_1" FromRole="Diction" ToRole="Bank_Card" />
+    <NavigationProperty Name="Lifing_Cost" Relationship="Life.SQLiteDAL.FK_Lifing_Cost_0" FromRole="Diction" ToRole="Lifing_Cost" />
+  </EntityType>
+  <EntityType Name="Income">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="TIME" Type="DateTime" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Note" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="UpDate_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="UpDate_Time" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="Lifing_Cost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="TIME" Type="DateTime" />
+    <Property Name="Reason" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Notes" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Img_Url" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="UpDate_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="UpDate_Time" Type="DateTime" />
+    <NavigationProperty Name="Diction" Relationship="Life.SQLiteDAL.FK_Lifing_Cost_0" FromRole="Lifing_Cost" ToRole="Diction" />
+  </EntityType>
+  <EntityType Name="Lifing_Cost_log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Cost_Id" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="TIME" Type="DateTime" />
+    <Property Name="Reason" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Notes" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Cost_Type_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="Ope_Type" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="Module_ID" />
+    </Key>
+    <Property Name="Module_ID" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Module_Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Module_URL" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Icon_Url" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Parent_Id" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Order_Id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Notes" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="STATUS" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Role_To_Module" Relationship="Life.SQLiteDAL.FK_Role_To_Module_0" FromRole="Module" ToRole="Role_To_Module" />
+  </EntityType>
+  <EntityType Name="Role_To_Module">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Module" Relationship="Life.SQLiteDAL.FK_Role_To_Module_0" FromRole="Role_To_Module" ToRole="Module" />
+    <NavigationProperty Name="Roles" Relationship="Life.SQLiteDAL.FK_Role_To_Module_1" FromRole="Role_To_Module" ToRole="Roles" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+    </Key>
+    <Property Name="Role_Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Role_Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Notes" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Role_To_Module" Relationship="Life.SQLiteDAL.FK_Role_To_Module_1" FromRole="Roles" ToRole="Role_To_Module" />
+    <NavigationProperty Name="User_To_Role" Relationship="Life.SQLiteDAL.FK_User_To_Role_0" FromRole="Roles" ToRole="User_To_Role" />
+  </EntityType>
+  <EntityType Name="Temp_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Expires" Type="DateTime" />
+    <Property Name="Create_Time" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="User_To_Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Roles" Relationship="Life.SQLiteDAL.FK_User_To_Role_0" FromRole="User_To_Role" ToRole="Roles" />
+    <NavigationProperty Name="Users" Relationship="Life.SQLiteDAL.FK_User_To_Role_1" FromRole="User_To_Role" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Login_Id" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Login_Pwd" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Age" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Notes" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="User_To_Role" Relationship="Life.SQLiteDAL.FK_User_To_Role_1" FromRole="Users" ToRole="User_To_Role" />
+  </EntityType>
+  <EntityType Name="V_Art_Category">
+    <Key>
+      <PropertyRef Name="Cat_Id" />
+    </Key>
+    <Property Name="Cat_Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Cat_Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Cat_Remark" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Cat_Order" Type="Int32" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="UpDate_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="UpDate_Time" Type="DateTime" />
+    <Property Name="Create_Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Update_Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="V_BANK_CARD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="TIME" Type="DateTime" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Save_Type" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Balance" Type="Double" />
+    <Property Name="Bank_Type" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Note" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="UpDate_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="UpDate_Time" Type="DateTime" />
+    <Property Name="BANK_TYPE_NAME" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="SAVE_NAME" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="CREATE_NAME" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="UPDATE_NAME" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="V_Income">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="TIME" Type="DateTime" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Note" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="UpDate_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="UpDate_Time" Type="DateTime" />
+    <Property Name="Create_Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Update_Name" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="V_LIFING_COST">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="TIME" Type="DateTime" />
+    <Property Name="Reason" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Cost_Type_Id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Notes" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Img_Url" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Create_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="Create_Time" Type="DateTime" />
+    <Property Name="UpDate_By" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="UpDate_Time" Type="DateTime" />
+    <Property Name="COST_TYPE_NAME" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="CREATE_NAME" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="UPDATE_NAME" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Article_0">
+    <End Role="Art_Category" Type="Life.SQLiteDAL.Art_Category" Multiplicity="0..1" />
+    <End Role="Article" Type="Life.SQLiteDAL.Article" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Bank_Card_0">
+    <End Role="Diction" Type="Life.SQLiteDAL.Diction" Multiplicity="0..1" />
+    <End Role="Bank_Card" Type="Life.SQLiteDAL.Bank_Card" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Bank_Card_1">
+    <End Role="Diction" Type="Life.SQLiteDAL.Diction" Multiplicity="0..1" />
+    <End Role="Bank_Card" Type="Life.SQLiteDAL.Bank_Card" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Lifing_Cost_0">
+    <End Role="Diction" Type="Life.SQLiteDAL.Diction" Multiplicity="0..1" />
+    <End Role="Lifing_Cost" Type="Life.SQLiteDAL.Lifing_Cost" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Role_To_Module_0">
+    <End Role="Module" Type="Life.SQLiteDAL.Module" Multiplicity="0..1" />
+    <End Role="Role_To_Module" Type="Life.SQLiteDAL.Role_To_Module" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_Role_To_Module_1">
+    <End Role="Roles" Type="Life.SQLiteDAL.Roles" Multiplicity="0..1" />
+    <End Role="Role_To_Module" Type="Life.SQLiteDAL.Role_To_Module" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_User_To_Role_0">
+    <End Role="Roles" Type="Life.SQLiteDAL.Roles" Multiplicity="0..1" />
+    <End Role="User_To_Role" Type="Life.SQLiteDAL.User_To_Role" Multiplicity="*" />
+  </Association>
+  <Association Name="FK_User_To_Role_1">
+    <End Role="Users" Type="Life.SQLiteDAL.Users" Multiplicity="0..1" />
+    <End Role="User_To_Role" Type="Life.SQLiteDAL.User_To_Role" Multiplicity="*" />
+  </Association>
+</Schema>

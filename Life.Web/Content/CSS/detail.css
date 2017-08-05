@@ -1,0 +1,106 @@
+﻿html, body, form
+{
+    margin: 0;
+    padding: 0;
+}
+
+.div_top
+{
+    background-color: #E6E6E6;
+    border: 1px solid #AAAAAA;
+    padding: 2px;
+}
+
+.detail th
+{
+    text-align: center;
+    color: #990000;
+    font-weight: bold;
+    background-color: #EEEEEE;
+    line-height: 30px;
+    background-image: url(../../images/talbe_title_bg.png);
+}
+
+.detail
+{
+    border-left: 1px solid #AAAAAA;
+    border-top: 1px solid #AAAAAA;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    font-size: 13px;
+}
+
+.detail td, th
+{
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border-bottom: 1px solid #AAAAAA;
+    border-right: 1px solid #AAAAAA;
+    line-height: 25px;
+    text-align: center;
+}
+
+.tr_1
+{
+    background-color: #FFFFFF;
+}
+
+.tr_2
+{
+    background-color: #F3FAFA;
+}
+
+.title
+{
+    background-image: url(../../images/talbe_title_bg.png);
+    font-size: 12px;
+    font-weight: bold;
+    color: #900;
+    height: 30px;
+    padding: 0px;
+}
+
+.rblStyle td
+{
+    border: 0px;
+}
+.txt
+{
+    border: 1px solid #CCCCCC;
+    }
+.btn
+{
+    height: 23px;
+    width: 72px;
+    background: url(../../images/style_input70.jpg);
+    color: #1F5992;
+    border: 0px;
+    vertical-align: bottom;
+}
+/*超链接样式*/
+a
+{
+    color: Blue;
+}
+
+/*分页控件的样式*/
+.page_info
+{
+    text-align: left;
+    border: 1px solid #999;
+    white-space: nowrap;
+    height: 22px;
+    float: left;
+    margin:1px;
+    background-color:White;   
+}
+.page_info strong
+{
+    color: Red;
+}
+a
+{
+    color:#339966;
+    text-decoration:none;
+}
+

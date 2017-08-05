@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+    <script src="/Content/Script/include_all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            var grid=Ext.create("Life.LifeMan.BankType.Grid", {                
+            });
+
+            Ext.create("Ext.container.Viewport", {
+                layout: "fit",
+                items: [grid],
+                listeners: {
+                    "afterrender": function () {
+                        parent.myMask.hide();
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        
+    </div>
+</body>
+</html>

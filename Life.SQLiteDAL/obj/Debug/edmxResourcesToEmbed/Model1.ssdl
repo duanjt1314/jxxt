@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Life.SQLiteDAL.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="LifeSQLiteDALStoreContainer">
+    <EntitySet Name="Art_Category" EntityType="Life.SQLiteDAL.Store.Art_Category" store:Type="Tables" />
+    <EntitySet Name="Article" EntityType="Life.SQLiteDAL.Store.Article" store:Type="Tables" />
+    <EntitySet Name="Bank_Card" EntityType="Life.SQLiteDAL.Store.Bank_Card" store:Type="Tables" />
+    <EntitySet Name="Bank_Card_log" EntityType="Life.SQLiteDAL.Store.Bank_Card_log" store:Type="Tables" />
+    <EntitySet Name="Diction" EntityType="Life.SQLiteDAL.Store.Diction" store:Type="Tables" />
+    <EntitySet Name="Income" EntityType="Life.SQLiteDAL.Store.Income" store:Type="Tables" />
+    <EntitySet Name="Lifing_Cost" EntityType="Life.SQLiteDAL.Store.Lifing_Cost" store:Type="Tables" />
+    <EntitySet Name="Lifing_Cost_log" EntityType="Life.SQLiteDAL.Store.Lifing_Cost_log" store:Type="Tables" />
+    <EntitySet Name="Module" EntityType="Life.SQLiteDAL.Store.Module" store:Type="Tables" />
+    <EntitySet Name="Role_To_Module" EntityType="Life.SQLiteDAL.Store.Role_To_Module" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Life.SQLiteDAL.Store.Roles" store:Type="Tables" />
+    <EntitySet Name="Temp_Data" EntityType="Life.SQLiteDAL.Store.Temp_Data" store:Type="Tables" />
+    <EntitySet Name="User_To_Role" EntityType="Life.SQLiteDAL.Store.User_To_Role" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Life.SQLiteDAL.Store.Users" store:Type="Tables" />
+    <EntitySet Name="V_Art_Category" EntityType="Life.SQLiteDAL.Store.V_Art_Category" store:Type="Views" store:Name="V_Art_Category">
+      <DefiningQuery>SELECT 
+      [V_Art_Category].[Cat_Id] AS [Cat_Id], 
+      [V_Art_Category].[Cat_Name] AS [Cat_Name], 
+      [V_Art_Category].[Cat_Remark] AS [Cat_Remark], 
+      [V_Art_Category].[Cat_Order] AS [Cat_Order], 
+      [V_Art_Category].[Create_By] AS [Create_By], 
+      [V_Art_Category].[Create_Time] AS [Create_Time], 
+      [V_Art_Category].[UpDate_By] AS [UpDate_By], 
+      [V_Art_Category].[UpDate_Time] AS [UpDate_Time], 
+      [V_Art_Category].[Create_Name] AS [Create_Name], 
+      [V_Art_Category].[Update_Name] AS [Update_Name]
+      FROM [V_Art_Category] AS [V_Art_Category]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_BANK_CARD" EntityType="Life.SQLiteDAL.Store.V_BANK_CARD" store:Type="Views" store:Name="V_BANK_CARD">
+      <DefiningQuery>SELECT 
+      [V_BANK_CARD].[Id] AS [Id], 
+      [V_BANK_CARD].[TIME] AS [TIME], 
+      [V_BANK_CARD].[Price] AS [Price], 
+      [V_BANK_CARD].[Save_Type] AS [Save_Type], 
+      [V_BANK_CARD].[Balance] AS [Balance], 
+      [V_BANK_CARD].[Bank_Type] AS [Bank_Type], 
+      [V_BANK_CARD].[Note] AS [Note], 
+      [V_BANK_CARD].[Create_By] AS [Create_By], 
+      [V_BANK_CARD].[Create_Time] AS [Create_Time], 
+      [V_BANK_CARD].[UpDate_By] AS [UpDate_By], 
+      [V_BANK_CARD].[UpDate_Time] AS [UpDate_Time], 
+      [V_BANK_CARD].[BANK_TYPE_NAME] AS [BANK_TYPE_NAME], 
+      [V_BANK_CARD].[SAVE_NAME] AS [SAVE_NAME], 
+      [V_BANK_CARD].[CREATE_NAME] AS [CREATE_NAME], 
+      [V_BANK_CARD].[UPDATE_NAME] AS [UPDATE_NAME]
+      FROM [V_BANK_CARD] AS [V_BANK_CARD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_Income" EntityType="Life.SQLiteDAL.Store.V_Income" store:Type="Views" store:Name="V_Income">
+      <DefiningQuery>SELECT 
+      [V_Income].[Id] AS [Id], 
+      [V_Income].[TIME] AS [TIME], 
+      [V_Income].[Price] AS [Price], 
+      [V_Income].[Note] AS [Note], 
+      [V_Income].[Create_By] AS [Create_By], 
+      [V_Income].[Create_Time] AS [Create_Time], 
+      [V_Income].[UpDate_By] AS [UpDate_By], 
+      [V_Income].[UpDate_Time] AS [UpDate_Time], 
+      [V_Income].[Create_Name] AS [Create_Name], 
+      [V_Income].[Update_Name] AS [Update_Name]
+      FROM [V_Income] AS [V_Income]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_LIFING_COST" EntityType="Life.SQLiteDAL.Store.V_LIFING_COST" store:Type="Views" store:Name="V_LIFING_COST">
+      <DefiningQuery>SELECT 
+      [V_LIFING_COST].[Id] AS [Id], 
+      [V_LIFING_COST].[TIME] AS [TIME], 
+      [V_LIFING_COST].[Reason] AS [Reason], 
+      [V_LIFING_COST].[Price] AS [Price], 
+      [V_LIFING_COST].[Cost_Type_Id] AS [Cost_Type_Id], 
+      [V_LIFING_COST].[Notes] AS [Notes], 
+      [V_LIFING_COST].[Img_Url] AS [Img_Url], 
+      [V_LIFING_COST].[Create_By] AS [Create_By], 
+      [V_LIFING_COST].[Create_Time] AS [Create_Time], 
+      [V_LIFING_COST].[UpDate_By] AS [UpDate_By], 
+      [V_LIFING_COST].[UpDate_Time] AS [UpDate_Time], 
+      [V_LIFING_COST].[COST_TYPE_NAME] AS [COST_TYPE_NAME], 
+      [V_LIFING_COST].[CREATE_NAME] AS [CREATE_NAME], 
+      [V_LIFING_COST].[UPDATE_NAME] AS [UPDATE_NAME]
+      FROM [V_LIFING_COST] AS [V_LIFING_COST]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Article_0" Association="Life.SQLiteDAL.Store.FK_Article_0">
+      <End Role="Art_Category" EntitySet="Art_Category" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bank_Card_0" Association="Life.SQLiteDAL.Store.FK_Bank_Card_0">
+      <End Role="Diction" EntitySet="Diction" />
+      <End Role="Bank_Card" EntitySet="Bank_Card" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bank_Card_1" Association="Life.SQLiteDAL.Store.FK_Bank_Card_1">
+      <End Role="Diction" EntitySet="Diction" />
+      <End Role="Bank_Card" EntitySet="Bank_Card" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lifing_Cost_0" Association="Life.SQLiteDAL.Store.FK_Lifing_Cost_0">
+      <End Role="Diction" EntitySet="Diction" />
+      <End Role="Lifing_Cost" EntitySet="Lifing_Cost" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Role_To_Module_0" Association="Life.SQLiteDAL.Store.FK_Role_To_Module_0">
+      <End Role="Module" EntitySet="Module" />
+      <End Role="Role_To_Module" EntitySet="Role_To_Module" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Role_To_Module_1" Association="Life.SQLiteDAL.Store.FK_Role_To_Module_1">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Role_To_Module" EntitySet="Role_To_Module" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_To_Role_0" Association="Life.SQLiteDAL.Store.FK_User_To_Role_0">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="User_To_Role" EntitySet="User_To_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_To_Role_1" Association="Life.SQLiteDAL.Store.FK_User_To_Role_1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="User_To_Role" EntitySet="User_To_Role" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Art_Category">
+    <Key>
+      <PropertyRef Name="Cat_Id" />
+    </Key>
+    <Property Name="Cat_Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Cat_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Cat_Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cat_Order" Type="int" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="UpDate_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpDate_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Content" Type="nvarchar" />
+    <Property Name="Cate_Id" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="UpDate_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpDate_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Bank_Card">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TIME" Type="datetime" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Save_Type" Type="decimal" />
+    <Property Name="Balance" Type="float" />
+    <Property Name="Bank_Type" Type="decimal" />
+    <Property Name="Note" Type="nvarchar" MaxLength="200" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="UpDate_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpDate_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Bank_Card_log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Bank_Id" Type="nvarchar" MaxLength="64" />
+    <Property Name="TIME" Type="datetime" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Save_Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="Balance" Type="float" />
+    <Property Name="Bank_Type" Type="nvarchar" MaxLength="40" />
+    <Property Name="Note" Type="nvarchar" MaxLength="200" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Ope_Type" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Diction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="decimal" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Note" Type="nvarchar" MaxLength="200" />
+    <Property Name="Parent_Id" Type="decimal" />
+    <Property Name="Order_Id" Type="decimal" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="20" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Update_By" Type="nvarchar" MaxLength="20" />
+    <Property Name="Update_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Income">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TIME" Type="datetime" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Note" Type="nvarchar" MaxLength="200" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="UpDate_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpDate_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Lifing_Cost">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TIME" Type="datetime" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="200" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Cost_Type_Id" Type="decimal" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="200" />
+    <Property Name="Img_Url" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="UpDate_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpDate_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Lifing_Cost_log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Cost_Id" Type="nvarchar" MaxLength="64" />
+    <Property Name="TIME" Type="datetime" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="200" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="200" />
+    <Property Name="Cost_Type_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="Ope_Type" Type="nvarchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="Module">
+    <Key>
+      <PropertyRef Name="Module_ID" />
+    </Key>
+    <Property Name="Module_ID" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Module_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Module_URL" Type="nvarchar" MaxLength="50" />
+    <Property Name="Icon_Url" Type="nvarchar" MaxLength="200" />
+    <Property Name="Parent_Id" Type="nvarchar" MaxLength="64" />
+    <Property Name="Order_Id" Type="decimal" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="1000" />
+    <Property Name="STATUS" Type="decimal" />
+  </EntityType>
+  <EntityType Name="Role_To_Module">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Role_Id" Type="nvarchar" MaxLength="64" />
+    <Property Name="Module_Id" Type="nvarchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Role_Id" />
+    </Key>
+    <Property Name="Role_Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Role_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Temp_Data">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Email" Type="nvarchar" MaxLength="64" />
+    <Property Name="Expires" Type="datetime" />
+    <Property Name="Create_Time" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User_To_Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="User_Id" Type="nvarchar" MaxLength="64" />
+    <Property Name="Role_Id" Type="nvarchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Login_Id" Type="nvarchar" MaxLength="20" />
+    <Property Name="Login_Pwd" Type="nvarchar" MaxLength="64" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Age" Type="decimal" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“main.V_Art_Category”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="V_Art_Category">
+    <Key>
+      <PropertyRef Name="Cat_Id" />
+    </Key>
+    <Property Name="Cat_Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Cat_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Cat_Remark" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cat_Order" Type="int" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="UpDate_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpDate_Time" Type="datetime" />
+    <Property Name="Create_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Update_Name" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“main.V_BANK_CARD”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="V_BANK_CARD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TIME" Type="datetime" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Save_Type" Type="decimal" />
+    <Property Name="Balance" Type="float" />
+    <Property Name="Bank_Type" Type="decimal" />
+    <Property Name="Note" Type="nvarchar" MaxLength="200" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="UpDate_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpDate_Time" Type="datetime" />
+    <Property Name="BANK_TYPE_NAME" Type="nvarchar" MaxLength="20" />
+    <Property Name="SAVE_NAME" Type="nvarchar" MaxLength="20" />
+    <Property Name="CREATE_NAME" Type="nvarchar" MaxLength="20" />
+    <Property Name="UPDATE_NAME" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“main.V_Income”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="V_Income">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TIME" Type="datetime" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Note" Type="nvarchar" MaxLength="200" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="UpDate_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpDate_Time" Type="datetime" />
+    <Property Name="Create_Name" Type="nvarchar" MaxLength="20" />
+    <Property Name="Update_Name" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“main.V_LIFING_COST”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="V_LIFING_COST">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TIME" Type="datetime" />
+    <Property Name="Reason" Type="nvarchar" MaxLength="200" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Cost_Type_Id" Type="decimal" />
+    <Property Name="Notes" Type="nvarchar" MaxLength="200" />
+    <Property Name="Img_Url" Type="nvarchar" MaxLength="50" />
+    <Property Name="Create_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="Create_Time" Type="datetime" />
+    <Property Name="UpDate_By" Type="nvarchar" MaxLength="64" />
+    <Property Name="UpDate_Time" Type="datetime" />
+    <Property Name="COST_TYPE_NAME" Type="nvarchar" MaxLength="20" />
+    <Property Name="CREATE_NAME" Type="nvarchar" MaxLength="20" />
+    <Property Name="UPDATE_NAME" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_Article_0">
+    <End Role="Art_Category" Type="Life.SQLiteDAL.Store.Art_Category" Multiplicity="0..1" />
+    <End Role="Article" Type="Life.SQLiteDAL.Store.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Art_Category">
+        <PropertyRef Name="Cat_Id" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="Cate_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bank_Card_0">
+    <End Role="Diction" Type="Life.SQLiteDAL.Store.Diction" Multiplicity="0..1" />
+    <End Role="Bank_Card" Type="Life.SQLiteDAL.Store.Bank_Card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bank_Card">
+        <PropertyRef Name="Bank_Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bank_Card_1">
+    <End Role="Diction" Type="Life.SQLiteDAL.Store.Diction" Multiplicity="0..1" />
+    <End Role="Bank_Card" Type="Life.SQLiteDAL.Store.Bank_Card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bank_Card">
+        <PropertyRef Name="Save_Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lifing_Cost_0">
+    <End Role="Diction" Type="Life.SQLiteDAL.Store.Diction" Multiplicity="0..1" />
+    <End Role="Lifing_Cost" Type="Life.SQLiteDAL.Store.Lifing_Cost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diction">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lifing_Cost">
+        <PropertyRef Name="Cost_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Role_To_Module_0">
+    <End Role="Module" Type="Life.SQLiteDAL.Store.Module" Multiplicity="0..1" />
+    <End Role="Role_To_Module" Type="Life.SQLiteDAL.Store.Role_To_Module" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Module">
+        <PropertyRef Name="Module_ID" />
+      </Principal>
+      <Dependent Role="Role_To_Module">
+        <PropertyRef Name="Module_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Role_To_Module_1">
+    <End Role="Roles" Type="Life.SQLiteDAL.Store.Roles" Multiplicity="0..1" />
+    <End Role="Role_To_Module" Type="Life.SQLiteDAL.Store.Role_To_Module" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Role_Id" />
+      </Principal>
+      <Dependent Role="Role_To_Module">
+        <PropertyRef Name="Role_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_To_Role_0">
+    <End Role="Roles" Type="Life.SQLiteDAL.Store.Roles" Multiplicity="0..1" />
+    <End Role="User_To_Role" Type="Life.SQLiteDAL.Store.User_To_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Role_Id" />
+      </Principal>
+      <Dependent Role="User_To_Role">
+        <PropertyRef Name="Role_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_To_Role_1">
+    <End Role="Users" Type="Life.SQLiteDAL.Store.Users" Multiplicity="0..1" />
+    <End Role="User_To_Role" Type="Life.SQLiteDAL.Store.User_To_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User_To_Role">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
