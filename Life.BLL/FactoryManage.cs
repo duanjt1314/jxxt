@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Reflection;
 using Life.Factory.Flow;
 using Life.Factory;
+using Life.Factory.JiaoXue;
 
 namespace Life.BLL
 {
@@ -260,6 +261,20 @@ namespace Life.BLL
             string ClassNamespace = AssemblyPath + ".LifeMan.DLBankType";
             object objType = CreateObject(AssemblyPath, ClassNamespace);
             return (FBankType)objType;
+        }
+        #endregion
+
+        #region MyRegion
+
+        /// <summary>
+        /// 获得收入记录表
+        /// </summary>
+        /// <returns></returns>
+        public static FStudent GetStudent()
+        {
+            string ClassNamespace = AssemblyPath + ".JiaoXue.DLStudent";
+            object objType = CreateObject(AssemblyPath, ClassNamespace);
+            return (FStudent)objType;
         }
         #endregion
 

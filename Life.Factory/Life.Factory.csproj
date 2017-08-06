@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataCache.cs" />
+    <Compile Include="JiaoXue\FStudent.cs" />
     <Compile Include="LifeMan\FBankCard.cs" />
     <Compile Include="LifeMan\FBankCardLog.cs" />
     <Compile Include="LifeMan\FBankType.cs" />

@@ -33,11 +33,77 @@
     <File Include="App_Themes/Detail/Detail.skin">
       <publishTime>01/16/2014 21:59:25</publishTime>
     </File>
+    <File Include="Areas/Flow/Controllers/WorkFlowController.cs">
+      <publishTime>03/23/2014 12:50:29</publishTime>
+    </File>
+    <File Include="Areas/Flow/FlowAreaRegistration.cs">
+      <publishTime>03/22/2014 21:55:36</publishTime>
+    </File>
     <File Include="Areas/Flow/Views/FlowType/Index.cshtml">
       <publishTime>03/23/2014 14:04:28</publishTime>
     </File>
     <File Include="Areas/Flow/Views/Web.config">
       <publishTime>03/22/2014 21:55:35</publishTime>
+    </File>
+    <File Include="Areas/JiaoXue/JiaoXueAreaRegistration.cs">
+      <publishTime>08/06/2017 21:51:39</publishTime>
+    </File>
+    <File Include="Areas/JiaoXue/Views/Web.config">
+      <publishTime>08/06/2017 21:49:52</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/ArtCategoryController.cs">
+      <publishTime>03/23/2014 09:39:00</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/ArticleController.cs">
+      <publishTime>03/23/2014 09:39:09</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/BankCardController.cs">
+      <publishTime>12/17/2015 09:38:56</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/BankTypeController.cs">
+      <publishTime>12/07/2014 16:19:21</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/DefaultController.cs">
+      <publishTime>03/23/2014 09:40:07</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/DictionController.cs">
+      <publishTime>03/23/2014 09:40:07</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/IncomeController.cs">
+      <publishTime>01/19/2016 16:44:07</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/LifingCostController.cs">
+      <publishTime>09/17/2016 21:20:20</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/ManageController.cs">
+      <publishTime>01/27/2016 16:45:36</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/ModuleController.cs">
+      <publishTime>03/23/2014 09:40:07</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/PurchaseController.cs">
+      <publishTime>03/23/2014 09:40:07</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/RolesController.cs">
+      <publishTime>03/23/2014 09:40:07</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/RoleToModuleController.cs">
+      <publishTime>03/23/2014 09:40:07</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/SalesVolController.cs">
+      <publishTime>03/23/2014 09:40:07</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/ServiceController.cs">
+      <publishTime>08/02/2017 22:18:05</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/SysConfigController.cs">
+      <publishTime>03/23/2014 09:40:06</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/Controllers/UsersController.cs">
+      <publishTime>06/09/2016 20:15:42</publishTime>
+    </File>
+    <File Include="Areas/LifeMan/LifeManAreaRegistration.cs">
+      <publishTime>03/23/2014 09:42:02</publishTime>
     </File>
     <File Include="Areas/LifeMan/Views/ArtCategory/Index.cshtml">
       <publishTime>03/23/2014 10:39:05</publishTime>
@@ -64,7 +130,7 @@
       <publishTime>12/09/2014 22:20:05</publishTime>
     </File>
     <File Include="Areas/LifeMan/Views/Default/Index.cshtml">
-      <publishTime>03/22/2016 21:45:02</publishTime>
+      <publishTime>08/06/2017 17:28:44</publishTime>
     </File>
     <File Include="Areas/LifeMan/Views/Diction/Index.cshtml">
       <publishTime>03/23/2014 10:38:40</publishTime>
@@ -82,7 +148,7 @@
       <publishTime>11/06/2014 13:21:19</publishTime>
     </File>
     <File Include="Areas/LifeMan/Views/Manage/Index.cshtml">
-      <publishTime>03/25/2016 11:56:47</publishTime>
+      <publishTime>08/06/2017 17:24:16</publishTime>
     </File>
     <File Include="Areas/LifeMan/Views/Module/Index.cshtml">
       <publishTime>03/23/2014 10:39:11</publishTime>
