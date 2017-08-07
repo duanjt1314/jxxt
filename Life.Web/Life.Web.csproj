@@ -5574,7 +5574,6 @@
     <Content Include="Content\Script\touch-2.3.1\src\XTemplateCompiler.js" />
     <Content Include="Content\Script\touch-2.3.1\src\XTemplateParser.js" />
     <Content Include="Global.asax" />
-    <Content Include="HTML\HTMLPage1.htm" />
     <Content Include="HTML\Index.htm" />
     <Content Include="HTML\SearchImg.aspx" />
     <Content Include="HTML\top.htm" />
