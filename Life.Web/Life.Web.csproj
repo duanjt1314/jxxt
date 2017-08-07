@@ -109,6 +109,7 @@
     </Compile>
     <Compile Include="Areas\Flow\Controllers\WorkFlowController.cs" />
     <Compile Include="Areas\Flow\FlowAreaRegistration.cs" />
+    <Compile Include="Areas\JiaoXue\Controllers\TeacherController.cs" />
     <Compile Include="Areas\JiaoXue\Controllers\StudentController.cs" />
     <Compile Include="Areas\JiaoXue\JiaoXueAreaRegistration.cs" />
     <Compile Include="Areas\LifeMan\Controllers\BankTypeController.cs" />
@@ -191,6 +192,8 @@
     <Content Include="Content\CSS\login.css" />
     <Content Include="Content\CSS\phoneLogin.css" />
     <Content Include="Content\Function\Flow\FlowType\Grid.js" />
+    <Content Include="Content\Function\JiaoXue\Teacher\Grid.js" />
+    <Content Include="Content\Function\JiaoXue\Teacher\SearchPanel.js" />
     <Content Include="Content\Function\JiaoXue\Student\SearchPanel.js" />
     <Content Include="Content\Function\JiaoXue\Student\Grid.js" />
     <Content Include="Content\Function\LifeMan\ArtCategory\ArtCategoryGrid.js" />
@@ -5614,6 +5617,7 @@
     <Content Include="App_Data\Life.db3" />
     <Content Include="Areas\JiaoXue\Views\Web.config" />
     <Content Include="Areas\JiaoXue\Views\Student\Index.cshtml" />
+    <Content Include="Areas\JiaoXue\Views\Teacher\Index.cshtml" />
     <None Include="Content\Script\ExtJs\resources\ext-theme-access\Readme.md" />
     <None Include="Content\Script\ExtJs\resources\ext-theme-classic-sandbox\Readme.md" />
     <None Include="Content\Script\ExtJs\resources\ext-theme-classic\Readme.md" />

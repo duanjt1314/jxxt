@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JiaoXue\DLTeacher.cs" />
     <Compile Include="JiaoXue\DLStudent.cs" />
     <Compile Include="LifeMan\DLArtCategory.cs" />
     <Compile Include="LifeMan\DLArticle.cs" />

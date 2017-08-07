@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JiaoXue\BLTeacher.cs" />
     <Compile Include="JiaoXue\BLStudent.cs" />
     <Compile Include="LifeMan\BLArtCategory.cs" />
     <Compile Include="LifeMan\BLArticle.cs" />
@@ -58,7 +59,7 @@
     <Compile Include="LifeMan\BLTempData.cs" />
     <Compile Include="LifeMan\BLUsers.cs" />
     <Compile Include="LifeMan\BLUserToRole.cs" />
-    <Compile Include="FactoryManage.cs" />
+    <Compile Include="JiaoXue\FactoryManage.cs" />
     <Compile Include="Flow\BLFlowType.cs" />
     <Compile Include="Flow\BLWorkFlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
