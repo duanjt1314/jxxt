@@ -191,6 +191,7 @@
     <Content Include="Content\CSS\login.css" />
     <Content Include="Content\CSS\phoneLogin.css" />
     <Content Include="Content\Function\Flow\FlowType\Grid.js" />
+    <Content Include="Content\Function\JiaoXue\Student\SearchPanel.js" />
     <Content Include="Content\Function\JiaoXue\Student\Grid.js" />
     <Content Include="Content\Function\LifeMan\ArtCategory\ArtCategoryGrid.js" />
     <Content Include="Content\Function\LifeMan\Article\ArticleGrid.js" />
