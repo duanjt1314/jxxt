@@ -5577,7 +5577,6 @@
     <Content Include="HTML\Index.htm" />
     <Content Include="HTML\SearchImg.aspx" />
     <Content Include="HTML\top.htm" />
-    <Content Include="HTML\版本介绍.txt" />
     <Content Include="Phone\index.htm" />
     <Content Include="Phone\LifeList.aspx" />
     <Content Include="Phone\LifeOpe.aspx" />
