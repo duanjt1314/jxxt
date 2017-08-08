@@ -151,34 +151,6 @@
     <Compile Include="HTML\SearchImg.aspx.designer.cs">
       <DependentUpon>SearchImg.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Phone\LifeList.aspx.cs">
-      <DependentUpon>LifeList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phone\LifeList.aspx.designer.cs">
-      <DependentUpon>LifeList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phone\LifeOpe.aspx.cs">
-      <DependentUpon>LifeOpe.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phone\LifeOpe.aspx.designer.cs">
-      <DependentUpon>LifeOpe.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phone\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phone\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Phone\Menu.aspx.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Phone\Menu.aspx.designer.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -5577,13 +5549,6 @@
     <Content Include="HTML\Index.htm" />
     <Content Include="HTML\SearchImg.aspx" />
     <Content Include="HTML\top.htm" />
-    <Content Include="Phone\index.htm" />
-    <Content Include="Phone\LifeList.aspx" />
-    <Content Include="Phone\LifeOpe.aspx" />
-    <Content Include="Phone\Login.aspx" />
-    <Content Include="Phone\MainTest.htm" />
-    <Content Include="Phone\Menu.aspx" />
-    <Content Include="Phone\test.htm" />
     <Content Include="Sql脚本.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -5599,7 +5564,6 @@
     <Folder Include="Areas\Flow\Views\Shared\" />
     <Folder Include="Areas\LifeMan\Views\Shared\" />
     <Folder Include="Content\Script\kindeditor-4.1.4\attached\" />
-    <Folder Include="Service\LifeMan\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AJ\UpdImage\file_manager_json.ashx" />
